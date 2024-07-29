@@ -27,8 +27,8 @@ class PaymentProcessorRequest extends FormRequest
         return [
             'name' => [
                 'required', Rule::when(
-                    $this->route('processor'),
-                    Rule::unique('payment_processors', 'name')->ignore($this->route('processor')->id),
+                    !is_null($this->route('processor')),
+                    Rule::unique('payment_processors', 'name')->ignore($this->route('processor')?->id),
                     Rule::unique('payment_processors', 'name')
                 )
             ],

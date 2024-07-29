@@ -11,8 +11,8 @@ return [
      * Low: minimum value.
      * Medium: medium value
      * high: High value
-     * 
-     * Example: 
+     *
+     * Example:
      * Low represents that a processor whose transaction cost is between 100 and 499 should be the best choice for our processing
      * Each value scores the processor a min of 1 point and max of 3points, for transaction cost: low -> 3, medium -> 2, high -> 1
      * For reliability: high means very stable. high -> 3, medium -> 2, low -> 1
